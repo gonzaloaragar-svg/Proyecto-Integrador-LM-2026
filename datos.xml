@@ -1,25 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Archivo de datos del proyecto integrador de Lenguajes de Marcas -->
 <catalogo propietario="gonzaloaragar-svg">
-    <item id="juegos-clasicos">
-        <nombre>Juegos clásicos</nombre>
-        <categoria>Entretenimiento</categoria>
-        <descripcion>Plataformas y aventuras con un estilo retro muy reconocido.</descripcion>
-        <valor unidad="euros">49.99</valor>
+    <item id="M01">
+        <nombre>Reggaetón</nombre>
+        <origen>Puerto Rico</origen>
+        <descripcion>Fusiona el reggae en español y el dancehall con influencias del hip hop.</descripcion>
+        <posicion unidad="orden">1.0</posicion>
         <destacado/>
     </item>
-    <item id="recursos-visuales">
-        <nombre>Recursos visuales</nombre>
-        <categoria>Diseño</categoria>
-        <descripcion>Elementos gráficos de estética nostálgica para la presentación del proyecto.</descripcion>
-        <valor unidad="euros">32.50</valor>
+    <item id="M02">
+        <nombre>Trap</nombre>
+        <origen>Atlanta, Estados Unidos</origen>
+        <descripcion>Usa sintetizadores, bajos profundos y platillos rápidos; también tiene una variante latina.</descripcion>
+        <posicion unidad="orden">2.0</posicion>
         <destacado/>
     </item>
-    <item id="contenido-organizado">
-        <nombre>Contenido organizado</nombre>
-        <categoria>Catalogación</categoria>
-        <descripcion>Listas y secciones estructuradas para mostrar la información con claridad.</descripcion>
-        <valor unidad="euros">21.00</valor>
+    <item id="M03">
+        <nombre>Hip Hop</nombre>
+        <origen>Nueva York</origen>
+        <descripcion>Combina rap, breakdance, graffiti y DJing como parte de una cultura global.</descripcion>
+        <posicion unidad="orden">3.0</posicion>
+        <destacado/>
+    </item>
+    <item id="M04">
+        <nombre>Dembow Dominicano</nombre>
+        <origen>República Dominicana</origen>
+        <descripcion>Género rápido y percusivo, pensado para la energía de la pista de baile.</descripcion>
+        <posicion unidad="orden">4.0</posicion>
         <destacado/>
     </item>
 </catalogo>
