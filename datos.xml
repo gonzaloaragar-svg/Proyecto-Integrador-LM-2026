@@ -3,6 +3,7 @@
 <catalogo propietario="gonzaloaragar-svg">
     <item id="M01">
         <nombre>Reggaetón</nombre>
+        <categoria>Urbano latino</categoria>
         <origen>Puerto Rico</origen>
         <descripcion>Fusiona el reggae en español y el dancehall con influencias del hip hop.</descripcion>
         <posicion unidad="orden">1.0</posicion>
@@ -10,6 +11,7 @@
     </item>
     <item id="M02">
         <nombre>Trap</nombre>
+        <categoria>Urbano</categoria>
         <origen>Atlanta, Estados Unidos</origen>
         <descripcion>Usa sintetizadores, bajos profundos y platillos rápidos; también tiene una variante latina.</descripcion>
         <posicion unidad="orden">2.0</posicion>
@@ -17,6 +19,7 @@
     </item>
     <item id="M03">
         <nombre>Hip Hop</nombre>
+        <categoria>Cultura urbana</categoria>
         <origen>Nueva York</origen>
         <descripcion>Combina rap, breakdance, graffiti y DJing como parte de una cultura global.</descripcion>
         <posicion unidad="orden">3.0</posicion>
@@ -24,6 +27,7 @@
     </item>
     <item id="M04">
         <nombre>Dembow Dominicano</nombre>
+        <categoria>Urbano caribeño</categoria>
         <origen>República Dominicana</origen>
         <descripcion>Género rápido y percusivo, pensado para la energía de la pista de baile.</descripcion>
         <posicion unidad="orden">4.0</posicion>
