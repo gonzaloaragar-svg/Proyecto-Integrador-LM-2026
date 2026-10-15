@@ -7,3 +7,8 @@
 
 ## Palabra del día
 Meta
+
+## Contenido del proyecto
+- `index.html`: página sobre géneros de música urbana y perfiles de artistas.
+- `datos.xml`: catálogo estructurado de los géneros, con origen, categoría y posición.
+- `img/`: imágenes de los artistas que aparecen en la página.
