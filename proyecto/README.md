@@ -18,3 +18,12 @@ Cosas que le faltan a `index.html` según los requisitos de la unidad:
 1. **Metadatos completos en la cabecera (`<head>`)**: Faltan las etiquetas `<meta name="description">`, `<meta name="keywords">` y `<meta name="author">`, así como adaptar el `<title>` al formato requerido (`Inicio | Nombre de tu proyecto`).
 2. **Jerarquía y coherencia en los títulos**: Corrección de los niveles de encabezados (actualmente se salta a `<h3>` para la sección de cantantes en lugar de usar un segundo `<h2>`, y hay un `<h4>` duplicado para Luar la L).
 3. **Estructura en bloques `<div>` comentados y nuevos elementos requeridos**: Faltan los comentarios de navegación (`<!-- NAV: aquí irá el menú (UD4) -->`), división del contenido en bloques `<div>` comentados, separadores `<hr>`, bloques de citas (`<blockquote>`), fichas técnicas preformateadas (`<pre>`), pie con copyright (`&copy;`) y entidades HTML (incluyendo al menos una numérica).
+
+## Mapa del sitio
+
+| Fichero | title | Qué contiene |
+| :--- | :--- | :--- |
+| index.html | Inicio \| Música Urbana | Portada principal: bienvenida, resumen de estilos musicales, ficha técnica comparativa en texto preformateado, perfiles destacados de artistas, cita cultural de Billboard, enlaces externos y pie de página. |
+| generos.html | Géneros \| Música Urbana | Catálogo completo de géneros urbanos que recoge todos los elementos de datos.xml (Reggaetón, Trap, Hip Hop, Dembow Dominicano) con categoría, origen, descripción y posición, además de una ficha técnica detallada. |
+| artistas.html | Artistas \| Música Urbana | Directorio de artistas urbanos con reseñas biográficas de figuras consagradas y emergentes, discografía destacada, galardones y una cita de autoría propia sobre el trabajo en estudio. |
+| historia.html | Historia \| Música Urbana | Recorrido cronológico de la música urbana desde sus orígenes en los años 70 y 90 hasta su consolidación global en la actualidad, hitos culturales y etapas clave. |
