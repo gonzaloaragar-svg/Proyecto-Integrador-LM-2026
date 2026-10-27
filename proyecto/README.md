@@ -10,14 +10,29 @@ Contexto
 
 ## Contenido del proyecto
 - `index.html`: página sobre géneros de música urbana y perfiles de artistas.
+- `generos.html`: catálogo completo de géneros urbanos basado en los datos estructurados XML.
+- `artistas.html`: biografías y discografía de los exponentes más destacados.
+- `historia.html`: cronología y etapas clave de la música urbana contemporánea.
 - `datos.xml`: catálogo estructurado de los géneros, con origen, categoría y posición.
-- `img/`: imágenes de los artistas que aparecen en la página.
+- `img/`: imágenes optimizadas de los artistas que aparecen en la página.
 
 ## UD3 · Estructura HTML
-Cosas que le faltan a `index.html` según los requisitos de la unidad:
-1. **Metadatos completos en la cabecera (`<head>`)**: Faltan las etiquetas `<meta name="description">`, `<meta name="keywords">` y `<meta name="author">`, así como adaptar el `<title>` al formato requerido (`Inicio | Nombre de tu proyecto`).
-2. **Jerarquía y coherencia en los títulos**: Corrección de los niveles de encabezados (actualmente se salta a `<h3>` para la sección de cantantes en lugar de usar un segundo `<h2>`, y hay un `<h4>` duplicado para Luar la L).
-3. **Estructura en bloques `<div>` comentados y nuevos elementos requeridos**: Faltan los comentarios de navegación (`<!-- NAV: aquí irá el menú (UD4) -->`), división del contenido en bloques `<div>` comentados, separadores `<hr>`, bloques de citas (`<blockquote>`), fichas técnicas preformateadas (`<pre>`), pie con copyright (`&copy;`) y entidades HTML (incluyendo al menos una numérica).
+Cosas que le faltan a `index.html` según los requisitos iniciales de la unidad:
+1. **Metadatos completos en la cabecera (`<head>`)**: Faltaban las etiquetas `<meta name="description">`, `<meta name="keywords">` y `<meta name="author">`, así como adaptar el `<title>` al formato requerido (`Inicio | Nombre de tu proyecto`).
+2. **Jerarquía y coherencia en los títulos**: Corrección de los niveles de encabezados (se saltaba a `<h3>` para la sección de cantantes en lugar de usar un segundo `<h2>`, y existía un `<h4>` duplicado para Luar la L).
+3. **Estructura en bloques `<div>` comentados y nuevos elementos requeridos**: Faltaban los comentarios de navegación (`<!-- NAV: aquí irá el menú (UD4) -->`), división del contenido en bloques `<div>` comentados, separadores `<hr>`, bloques de citas (`<blockquote>`), fichas técnicas preformateadas (`<pre>`), pie con copyright (`&copy;`) y entidades HTML (incluyendo al menos una numérica).
+
+### Tabla de validación W3C
+
+| Página | Errores detectados en W3C Validator | Corrección aplicada |
+| :--- | :--- | :--- |
+| `index.html` | 2 errores de sintaxis en atributo `src` de `<img>` (*Illegal character in path segment: Space is not allowed* en `img/luar la l.jpg` y `img/bad bunnyç.jpg`). | Se normalizaron los nombres de las imágenes eliminando espacios y caracteres conflictivos (`luar-la-l.jpg` y `bad-bunny.jpg`), y se actualizaron las rutas en las etiquetas `<img>` a `img/luar-la-l.jpg` e `img/bad-bunny.jpg`. Tras la corrección: **0 errores**. |
+| `generos.html` | 0 errores detectados. | Ninguna requerida; documento 100% válido y conforme a HTML5 en la primera comprobación. |
+| `artistas.html` | 0 errores detectados. | Ninguna requerida; documento 100% válido y conforme a HTML5 en la primera comprobación. |
+| `historia.html` | 0 errores detectados. | Ninguna requerida; documento 100% válido y conforme a HTML5 en la primera comprobación. |
+
+### Qué he hecho en esta unidad
+En esta unidad he transformado una portada básica en un sitio web completo de cuatro páginas respetando una jerarquía visual y semántica estricta. He implementado cabeceras con metadatos completos y títulos formalizados, estructurado el contenido en bloques `div` comentados con sangría coherente y añadido recursos avanzados como citas en bloque (`<blockquote>`), fichas técnicas alineadas en texto preformateado (`<pre>`) y entidades HTML tanto de carácter como numéricas. Por último, integré todo el catálogo de datos estructurados XML en una página dedicada y depuré el código hasta lograr cero errores en el validador oficial del W3C.
 
 ## Mapa del sitio
 
