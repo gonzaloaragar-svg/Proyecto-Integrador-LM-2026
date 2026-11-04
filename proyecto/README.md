@@ -34,6 +34,9 @@ Cosas que le faltan a `index.html` según los requisitos iniciales de la unidad:
 ### Qué he hecho en esta unidad
 En esta unidad he transformado una portada básica en un sitio web completo de cuatro páginas respetando una jerarquía visual y semántica estricta. He implementado cabeceras con metadatos completos y títulos formalizados, estructurado el contenido en bloques `div` comentados con sangría coherente y añadido recursos avanzados como citas en bloque (`<blockquote>`), fichas técnicas alineadas en texto preformateado (`<pre>`) y entidades HTML tanto de carácter como numéricas. Por último, integré todo el catálogo de datos estructurados XML en una página dedicada y depuré el código hasta lograr cero errores en el validador oficial del W3C.
 
+## UD5 · Tablas y formularios
+En la página `artistas.html` se incluirá una tabla comparativa detallada con datos reales sobre discografía, álbumes destacados, año de publicación, reproducciones estimadas y premios de las principales figuras de la música urbana. Por su parte, el formulario de la nueva página `contacto.html` servirá para que los seguidores y visitantes puedan enviar consultas, solicitar información sobre eventos y conciertos, o inscribirse en la lista de novedades y estrenos de la comunidad urbana.
+
 ## Mapa del sitio
 
 | Fichero | title | Qué contiene |
