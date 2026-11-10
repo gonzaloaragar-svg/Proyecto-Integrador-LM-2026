@@ -24,6 +24,30 @@
   <div>
     <h2>Envíanos tu Consulta</h2>
     <form action="#" method="post">
+      <!-- Primer grupo: Información personal y de acreditación -->
+      <fieldset>
+        <legend>Datos Personales y de Contacto</legend>
+
+        <p>
+          <label for="nombre">Nombre completo:</label><br>
+          <input type="text" id="nombre" name="nombre" placeholder="Ej. Gonzalo Álvarez" required minlength="3" maxlength="60" autofocus>
+        </p>
+
+        <p>
+          <label for="email">Correo electrónico:</label><br>
+          <input type="email" id="email" name="email" placeholder="usuario@ejemplo.com" required maxlength="80">
+        </p>
+
+        <p>
+          <label for="telefono">Teléfono móvil:</label><br>
+          <input type="tel" id="telefono" name="telefono" placeholder="Ej. +34 600 000 000" maxlength="15">
+        </p>
+
+        <p>
+          <label for="clave_acceso">Clave de acceso (zona miembros/prensa):</label><br>
+          <input type="password" id="clave_acceso" name="clave_acceso" minlength="6" maxlength="20" placeholder="Mínimo 6 caracteres">
+        </p>
+      </fieldset>
     </form>
   </div>
 
