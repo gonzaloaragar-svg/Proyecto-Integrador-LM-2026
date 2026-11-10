@@ -13,6 +13,7 @@ Día
 - `generos.html`: catálogo completo de géneros urbanos basado en los datos estructurados XML.
 - `artistas.html`: biografías y discografía de los exponentes más destacados.
 - `historia.html`: cronología y etapas clave de la música urbana contemporánea.
+- `contacto.html`: página de contacto y participación con formulario estructurado adaptado al tema.
 - `datos.xml`: catálogo estructurado de los géneros, con origen, categoría y posición.
 - `img/`: imágenes optimizadas de los artistas que aparecen en la página.
 
@@ -37,11 +38,31 @@ En esta unidad he transformado una portada básica en un sitio web completo de c
 ## UD5 · Tablas y formularios
 En la página `artistas.html` se incluirá una tabla comparativa detallada con datos reales sobre discografía, álbumes destacados, año de publicación, reproducciones estimadas y premios de las principales figuras de la música urbana. Por su parte, el formulario de la nueva página `contacto.html` servirá para que los seguidores y visitantes puedan enviar consultas, solicitar información sobre eventos y conciertos, o inscribirse en la lista de novedades y estrenos de la comunidad urbana.
 
+### Justificación del método de envío (POST vs GET)
+Se utiliza el método `post` en lugar de `get` porque el formulario procesa datos personales y de acceso (como claves de acreditación y mensajes extensos) que no deben exponerse públicamente en la barra de direcciones de la URL ni almacenarse en el historial del navegador, además de permitir la transferencia de mayor cantidad de información sin las limitaciones de longitud inherentes a una petición `get`.
+
+### Prueba del formulario con método GET
+URL obtenida tras la simulación de envío con `method="get"`:
+```text
+contacto.html?nombre=Gonzalo+Alvarez&email=gonzalo%40ejemplo.com&telefono=%2B34+600+000+000&clave_acceso=clave123&genero_favorito=reggaeton&perfil_usuario=oyente&intereses=festivales&mensaje=Hola%2C+deseo+recibir+informacion+y+reservar+entradas+para+los+proximos+conciertos+urbanos.
+```
+
+### Tabla de validación W3C (UD5)
+
+| Página | Errores detectados en W3C Validator | Corrección aplicada |
+| :--- | :--- | :--- |
+| `artistas.html` | 0 errores detectados. | Ninguna requerida; tabla con `caption`, `colgroup`, `thead`, `tbody`, `tfoot`, `th` con `scope`, `rowspan` y `colspan` conforme a HTML5 desde el inicio. |
+| `contacto.html` | 0 errores detectados. | Ninguna requerida; documento 100% válido con dos `fieldset`, `legend`, controles requeridos y correspondencia estricta entre `label for` e `id`. |
+
+### Qué he hecho en esta unidad
+En esta unidad he ampliado el sitio web integrando una tabla de datos completa en `artistas.html` estructurada con `caption`, `colgroup`, cabeceras semánticas (`scope`), secciones (`thead`, `tbody`, `tfoot`) y agrupaciones avanzadas (`rowspan` y `colspan`) que cuadran perfectamente. Asimismo, he creado la nueva página `contacto.html` con un formulario temático organizado en dos `fieldset` con sus correspondientes `legend`, ocho tipos de control interactivos, validaciones nativas de HTML5 (`required`, `minlength`, `placeholder`, `autofocus`, `selected`, `checked`) y envío seguro mediante método `post`, alcanzando cero errores en el validador oficial del W3C.
+
 ## Mapa del sitio
 
 | Fichero | title | Qué contiene |
 | :--- | :--- | :--- |
-| index.html | Inicio \| Música Urbana | Portada principal: bienvenida, resumen de estilos musicales, ficha técnica comparativa en texto preformateado, perfiles destacados de artistas, cita cultural de Billboard, enlaces externos y pie de página. |
+| index.html | Inicio \| Música Urbana | Portada principal: bienvenida, resumen de estilos musicales, ficha técnica comparativa en texto preformateado, perfiles destacados de artistas, cita cultural de Billboard, enlaces externos y enlace al formulario de contacto. |
 | generos.html | Géneros \| Música Urbana | Catálogo completo de géneros urbanos que recoge todos los elementos de datos.xml (Reggaetón, Trap, Hip Hop, Dembow Dominicano) con categoría, origen, descripción y posición, además de una ficha técnica detallada. |
-| artistas.html | Artistas \| Música Urbana | Directorio de artistas urbanos con reseñas biográficas de figuras consagradas y emergentes, discografía destacada, galardones y una cita de autoría propia sobre el trabajo en estudio. |
+| artistas.html | Artistas \| Música Urbana | Directorio de artistas urbanos con reseñas biográficas de figuras consagradas y emergentes, tabla comparativa de discografía y métricas (con colgroup, rowspan y colspan), galardones y una cita de autoría propia sobre el trabajo en estudio. |
 | historia.html | Historia \| Música Urbana | Recorrido cronológico de la música urbana desde sus orígenes en los años 70 y 90 hasta su consolidación global en la actualidad, hitos culturales y etapas clave. |
+| contacto.html | Contacto \| Música Urbana | Página interactiva con formulario adaptado al movimiento urbano: acreditación y datos de contacto, subgénero preferido, perfil de visitante, intereses y área de consulta/reserva. |
