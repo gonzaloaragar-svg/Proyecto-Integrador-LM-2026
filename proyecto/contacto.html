@@ -48,6 +48,58 @@
           <input type="password" id="clave_acceso" name="clave_acceso" minlength="6" maxlength="20" placeholder="Mínimo 6 caracteres">
         </p>
       </fieldset>
+
+      <!-- Segundo grupo: Preferencias de contenido y mensaje -->
+      <fieldset>
+        <legend>Tu Consulta y Preferencias Urbanas</legend>
+
+        <p>
+          <label for="genero_favorito">Subgénero urbano de mayor interés:</label><br>
+          <select id="genero_favorito" name="genero_favorito">
+            <option value="reggaeton" selected>Reggaetón Clásico y Contemporáneo</option>
+            <option value="trap-drill">Trap Latino y Drill</option>
+            <option value="dembow">Dembow Dominicano</option>
+            <option value="hip-hop">Hip Hop y Boombap en Español</option>
+          </select>
+        </p>
+
+        <div>
+          <p>Perfil de visitante:</p>
+          <input type="radio" id="perfil_oyente" name="perfil_usuario" value="oyente" checked>
+          <label for="perfil_oyente">Oyente y seguidor del movimiento</label><br>
+
+          <input type="radio" id="perfil_artista" name="perfil_usuario" value="artista">
+          <label for="perfil_artista">Artista o productor musical emergente</label><br>
+
+          <input type="radio" id="perfil_prensa" name="perfil_usuario" value="prensa">
+          <label for="perfil_prensa">Medio de comunicación o promotor de eventos</label>
+        </div>
+
+        <div>
+          <p>Temas sobre los que deseas recibir novedades y alertas:</p>
+          <input type="checkbox" id="interes_festivales" name="intereses" value="festivales" checked>
+          <label for="interes_festivales">Festivales y conciertos urbanos</label><br>
+
+          <input type="checkbox" id="interes_lanzamientos" name="intereses" value="lanzamientos">
+          <label for="interes_lanzamientos">Nuevos lanzamientos discográficos y sencillos</label><br>
+
+          <input type="checkbox" id="interes_entrevistas" name="intereses" value="entrevistas">
+          <label for="interes_entrevistas">Entrevistas exclusivas a artistas</label><br>
+
+          <input type="checkbox" id="interes_sorteos" name="intereses" value="sorteos">
+          <label for="interes_sorteos">Sorteos de entradas y merchandising oficial</label>
+        </div>
+
+        <p>
+          <label for="mensaje">Detalle de tu mensaje o propuesta:</label><br>
+          <textarea id="mensaje" name="mensaje" rows="5" cols="50" placeholder="Escribe aquí tu consulta, propuesta o sugerencia..." required minlength="10" maxlength="500"></textarea>
+        </p>
+
+        <p>
+          <input type="submit" value="Enviar formulario">
+          <input type="reset" value="Restablecer datos">
+        </p>
+      </fieldset>
     </form>
   </div>
 
