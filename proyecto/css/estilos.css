@@ -488,3 +488,38 @@ input[type="reset"]:hover {
   background-color: var(--surface-alt);
   color: var(--text-primary);
 }
+
+/* ==========================================================================
+   Consultas de Medios (@media) para Diseño Adaptable (Responsive)
+   ========================================================================== */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.75rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  nav a {
+    text-align: center;
+  }
+
+  main {
+    padding: 0 0.75rem;
+    margin: 1.25rem auto;
+  }
+
+  section {
+    padding: 1.25rem;
+  }
+
+  article {
+    padding: 1rem;
+  }
+
+  iframe {
+    height: 220px;
+  }
+}
