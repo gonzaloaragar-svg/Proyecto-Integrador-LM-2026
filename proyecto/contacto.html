@@ -6,109 +6,153 @@
   <title>Contacto | Música Urbana</title>
   <meta name="description" content="Formulario de contacto y participación en la comunidad de música urbana: consultas, reservas y novedades discográficas.">
   <meta name="keywords" content="contacto, musica urbana, formulario, reggaeton, trap, consultas">
-  <meta name="author" content="Gonzalo">
+  <meta name="author" content="gonzaloaragar-svg">
+  <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-  <!-- NAV: aquí irá el menú (UD4) -->
-  <!-- Gonzalo - 05/11/2026 -->
-
-  <!-- Bloque de cabecera principal -->
-  <div>
+  <!-- Cabecera principal y navegación del portal -->
+  <header>
     <h1>Contacto y Participación Urbana</h1>
     <p>¿Tienes alguna duda sobre eventos, quieres proponer nuevos artistas para el catálogo o colaborar con nosotros? Completa el siguiente formulario para ponerte en contacto con nuestro equipo.</p>
-  </div>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="artistas.html">Artistas</a></li>
+        <li><a href="generos.html">Géneros</a></li>
+        <li><a href="historia.html">Historia</a></li>
+        <li><a href="contacto.html" class="activo">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <hr>
+  <!-- Contenido principal estructurado semánticamente -->
+  <main>
+    <!-- Sección 1: Formulario de atención y consulta -->
+    <section id="seccion-consulta">
+      <h2>Envíanos tu Consulta</h2>
+      <p>Utiliza nuestro formulario oficial para gestionar acreditaciones, sugerencias de contenido o consultas generales:</p>
 
-  <!-- Bloque de formulario de contacto -->
-  <div>
-    <h2>Envíanos tu Consulta</h2>
-    <form action="#" method="post">
-      <!-- Primer grupo: Información personal y de acreditación -->
-      <fieldset>
-        <legend>Datos Personales y de Contacto</legend>
+      <article id="articulo-formulario">
+        <h3>Formulario Oficial de Contacto</h3>
+        <form action="#" method="post">
+          <!-- Primer grupo: Información personal y de acreditación -->
+          <fieldset>
+            <legend>Datos Personales y de Contacto</legend>
 
-        <p>
-          <label for="nombre">Nombre completo:</label><br>
-          <input type="text" id="nombre" name="nombre" placeholder="Ej. Gonzalo Álvarez" required minlength="3" maxlength="60" autofocus>
-        </p>
+            <p>
+              <label for="nombre">Nombre completo:</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Ej. Gonzalo Álvarez" required minlength="3" maxlength="60" autofocus>
+            </p>
 
-        <p>
-          <label for="email">Correo electrónico:</label><br>
-          <input type="email" id="email" name="email" placeholder="usuario@ejemplo.com" required maxlength="80">
-        </p>
+            <p>
+              <label for="email">Correo electrónico:</label>
+              <input type="email" id="email" name="email" placeholder="usuario@ejemplo.com" required maxlength="80">
+            </p>
 
-        <p>
-          <label for="telefono">Teléfono móvil:</label><br>
-          <input type="tel" id="telefono" name="telefono" placeholder="Ej. +34 600 000 000" maxlength="15">
-        </p>
+            <p>
+              <label for="telefono">Teléfono móvil:</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="Ej. +34 600 000 000" maxlength="15">
+            </p>
 
-        <p>
-          <label for="clave_acceso">Clave de acceso (zona miembros/prensa):</label><br>
-          <input type="password" id="clave_acceso" name="clave_acceso" minlength="6" maxlength="20" placeholder="Mínimo 6 caracteres">
-        </p>
-      </fieldset>
+            <p>
+              <label for="clave_acceso">Clave de acceso (zona miembros/prensa):</label>
+              <input type="password" id="clave_acceso" name="clave_acceso" minlength="6" maxlength="20" placeholder="Mínimo 6 caracteres">
+            </p>
+          </fieldset>
 
-      <!-- Segundo grupo: Preferencias de contenido y mensaje -->
-      <fieldset>
-        <legend>Tu Consulta y Preferencias Urbanas</legend>
+          <!-- Segundo grupo: Preferencias de contenido y mensaje -->
+          <fieldset>
+            <legend>Tu Consulta y Preferencias Urbanas</legend>
 
-        <p>
-          <label for="genero_favorito">Subgénero urbano de mayor interés:</label><br>
-          <select id="genero_favorito" name="genero_favorito">
-            <option value="reggaeton" selected>Reggaetón Clásico y Contemporáneo</option>
-            <option value="trap-drill">Trap Latino y Drill</option>
-            <option value="dembow">Dembow Dominicano</option>
-            <option value="hip-hop">Hip Hop y Boombap en Español</option>
-          </select>
-        </p>
+            <p>
+              <label for="genero_favorito">Subgénero urbano de mayor interés:</label>
+              <select id="genero_favorito" name="genero_favorito">
+                <option value="reggaeton" selected>Reggaetón Clásico y Contemporáneo</option>
+                <option value="trap-drill">Trap Latino y Drill</option>
+                <option value="dembow">Dembow Dominicano</option>
+                <option value="hip-hop">Hip Hop y Boombap en Español</option>
+              </select>
+            </p>
 
-        <div>
-          <p>Perfil de visitante:</p>
-          <input type="radio" id="perfil_oyente" name="perfil_usuario" value="oyente" checked>
-          <label for="perfil_oyente">Oyente y seguidor del movimiento</label><br>
+            <fieldset>
+              <legend>Perfil de visitante:</legend>
+              <p>
+                <input type="radio" id="perfil_oyente" name="perfil_usuario" value="oyente" checked>
+                <label for="perfil_oyente">Oyente y seguidor del movimiento</label>
+              </p>
+              <p>
+                <input type="radio" id="perfil_artista" name="perfil_usuario" value="artista">
+                <label for="perfil_artista">Artista o productor musical emergente</label>
+              </p>
+              <p>
+                <input type="radio" id="perfil_prensa" name="perfil_usuario" value="prensa">
+                <label for="perfil_prensa">Medio de comunicación o promotor de eventos</label>
+              </p>
+            </fieldset>
 
-          <input type="radio" id="perfil_artista" name="perfil_usuario" value="artista">
-          <label for="perfil_artista">Artista o productor musical emergente</label><br>
+            <fieldset>
+              <legend>Temas sobre los que deseas recibir novedades y alertas:</legend>
+              <p>
+                <input type="checkbox" id="interes_festivales" name="intereses" value="festivales" checked>
+                <label for="interes_festivales">Festivales y conciertos urbanos</label>
+              </p>
+              <p>
+                <input type="checkbox" id="interes_lanzamientos" name="intereses" value="lanzamientos">
+                <label for="interes_lanzamientos">Nuevos lanzamientos discográficos y sencillos</label>
+              </p>
+              <p>
+                <input type="checkbox" id="interes_entrevistas" name="intereses" value="entrevistas">
+                <label for="interes_entrevistas">Entrevistas exclusivas a artistas</label>
+              </p>
+              <p>
+                <input type="checkbox" id="interes_sorteos" name="intereses" value="sorteos">
+                <label for="interes_sorteos">Sorteos de entradas y merchandising oficial</label>
+              </p>
+            </fieldset>
 
-          <input type="radio" id="perfil_prensa" name="perfil_usuario" value="prensa">
-          <label for="perfil_prensa">Medio de comunicación o promotor de eventos</label>
-        </div>
+            <p>
+              <label for="mensaje">Detalle de tu mensaje o propuesta:</label>
+              <textarea id="mensaje" name="mensaje" rows="5" cols="50" placeholder="Escribe aquí tu consulta, propuesta o sugerencia..." required minlength="10" maxlength="500"></textarea>
+            </p>
 
-        <div>
-          <p>Temas sobre los que deseas recibir novedades y alertas:</p>
-          <input type="checkbox" id="interes_festivales" name="intereses" value="festivales" checked>
-          <label for="interes_festivales">Festivales y conciertos urbanos</label><br>
+            <p>
+              <input type="submit" value="Enviar formulario">
+              <input type="reset" value="Restablecer datos">
+            </p>
+          </fieldset>
+        </form>
+      </article>
+    </section>
 
-          <input type="checkbox" id="interes_lanzamientos" name="intereses" value="lanzamientos">
-          <label for="interes_lanzamientos">Nuevos lanzamientos discográficos y sencillos</label><br>
+    <!-- Sección 2: Información de soporte y respuesta -->
+    <section id="canales-soporte">
+      <h2>Canales de Atención y Soporte</h2>
+      <article id="horarios-atencion">
+        <h3>Tiempos y Vías de Respuesta</h3>
+        <p>Nuestro equipo de redacción y prensa revisa los mensajes recibidos de lunes a viernes en horario de 09:00 a 19:00 CET. Las solicitudes de acreditación para festivales se responden con prioridad en un plazo inferior a 24 horas.</p>
+        <p>Para consultas académicas o citas de investigación sobre música urbana, puedes consultar directamente la sección de <a href="historia.html">Historia</a>.</p>
+      </article>
+    </section>
 
-          <input type="checkbox" id="interes_entrevistas" name="intereses" value="entrevistas">
-          <label for="interes_entrevistas">Entrevistas exclusivas a artistas</label><br>
+    <!-- Barra lateral complementaria -->
+    <aside id="info-comunidad">
+      <h2>Comunidad y Redes</h2>
+      <article>
+        <h3>Participación Activa</h3>
+        <p>Súmate a nuestros debates mensuales sobre la evolución del género, las nuevas firmas de producción y los lanzamientos más escuchados del momento.</p>
+        <ul>
+          <li><a href="index.html">Volver a la Portada Principal</a></li>
+          <li><a href="artistas.html">Explorar Directorio de Artistas</a></li>
+          <li><a href="generos.html">Consultar Catálogo de Géneros</a></li>
+        </ul>
+      </article>
+    </aside>
+  </main>
 
-          <input type="checkbox" id="interes_sorteos" name="intereses" value="sorteos">
-          <label for="interes_sorteos">Sorteos de entradas y merchandising oficial</label>
-        </div>
-
-        <p>
-          <label for="mensaje">Detalle de tu mensaje o propuesta:</label><br>
-          <textarea id="mensaje" name="mensaje" rows="5" cols="50" placeholder="Escribe aquí tu consulta, propuesta o sugerencia..." required minlength="10" maxlength="500"></textarea>
-        </p>
-
-        <p>
-          <input type="submit" value="Enviar formulario">
-          <input type="reset" value="Restablecer datos">
-        </p>
-      </fieldset>
-    </form>
-  </div>
-
-  <hr>
-
-  <!-- Bloque de pie de página -->
-  <div>
-    <p>&copy; 2026 Gonzalo</p>
+  <!-- Pie de página con autoría y firma obligatoria -->
+  <footer>
+    <p id="firma-gonzaloaragar-svg">&copy; 2026 gonzaloaragar-svg</p>
     <p>Proyecto Integrador de Lenguajes de Marcas &mdash; Formulario de Contacto.</p>
-  </div>
+  </footer>
 </body>
 </html>
