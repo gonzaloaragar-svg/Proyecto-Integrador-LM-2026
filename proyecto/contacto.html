@@ -68,7 +68,8 @@
 
             <p>
               <label for="codigo_pase">Código de acreditación o reserva (formato URB-AAAA-XX):</label>
-              <input type="text" id="codigo_pase" name="codigo_pase" placeholder="Ej. URB-2026-ES" pattern="^URB-[0-9]{4}-[A-Z]{2}$" title="El código debe tener el formato URB- seguido de 4 dígitos del año y 2 letras mayúsculas de país (ej. URB-2026-ES)" required>
+              <input type="text" id="codigo_pase" name="codigo_pase" placeholder="Ej. URB-2026-ES" pattern="^URB-[0-9]{4}-[A-Z]{2}$" title="El código debe tener el formato URB- seguido de 4 dígitos del año y 2 letras mayúsculas de país (ej. URB-2026-ES)" aria-describedby="ayuda-codigo" required>
+              <small id="ayuda-codigo" class="form-ayuda">Introduce el identificador con prefijo URB-, 4 dígitos del año y 2 letras mayúsculas de país.</small>
             </p>
 
             <p>

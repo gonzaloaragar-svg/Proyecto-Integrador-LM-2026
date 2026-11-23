@@ -460,6 +460,14 @@ input:focus, select:focus, textarea:focus {
   box-shadow: 0 0 6px var(--accent-glow);
 }
 
+.form-ayuda {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: 0.35rem;
+  font-style: italic;
+}
+
 input[type="submit"], input[type="reset"] {
   width: auto;
   padding: 0.6rem 1.5rem;
