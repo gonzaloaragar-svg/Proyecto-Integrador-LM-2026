@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacto | Música Urbana</title>
   <meta name="description" content="Formulario de contacto y participación en la comunidad de música urbana: consultas, reservas y novedades discográficas.">
-  <meta name="keywords" content="contacto, musica urbana, formulario, reggaeton, trap, consultas">
+  <meta name="keywords" content="contacto, musica urbana, formulario, reggaeton, trap, consultas, acreditaciones">
   <meta name="author" content="gonzaloaragar-svg">
   <link rel="stylesheet" href="css/estilos.css">
 </head>
@@ -29,29 +29,46 @@
   <main>
     <!-- Sección 1: Formulario de atención y consulta -->
     <section id="seccion-consulta">
-      <h2>Envíanos tu Consulta</h2>
-      <p>Utiliza nuestro formulario oficial para gestionar acreditaciones, sugerencias de contenido o consultas generales:</p>
+      <h2>Envíanos tu Consulta y Reserva</h2>
+      <p>Utiliza nuestro formulario oficial para gestionar acreditaciones, sugerencias de contenido o reservar acceso anticipado al próximo festival:</p>
 
       <article id="articulo-formulario">
-        <h3>Formulario Oficial de Contacto</h3>
+        <h3>Formulario Oficial de Contacto y Acreditación</h3>
+
+        <!-- Indicador de progreso de la solicitud -->
+        <p>
+          <label for="progreso-formulario">Estado de cumplimentación de la solicitud:</label>
+          <progress id="progreso-formulario" value="75" max="100">75% completado</progress>
+        </p>
+
         <form action="#" method="post">
           <!-- Primer grupo: Información personal y de acreditación -->
           <fieldset>
             <legend>Datos Personales y de Contacto</legend>
 
             <p>
-              <label for="nombre">Nombre completo:</label>
+              <label for="nombre">Nombre completo (obligatorio):</label>
               <input type="text" id="nombre" name="nombre" placeholder="Ej. Gonzalo Álvarez" required minlength="3" maxlength="60" autofocus>
             </p>
 
             <p>
-              <label for="email">Correo electrónico:</label>
+              <label for="email">Correo electrónico oficial (obligatorio):</label>
               <input type="email" id="email" name="email" placeholder="usuario@ejemplo.com" required maxlength="80">
             </p>
 
             <p>
-              <label for="telefono">Teléfono móvil:</label>
+              <label for="telefono">Teléfono móvil de contacto:</label>
               <input type="tel" id="telefono" name="telefono" placeholder="Ej. +34 600 000 000" maxlength="15">
+            </p>
+
+            <p>
+              <label for="perfil_web">Enlace a perfil musical o web (Spotify, SoundCloud o Web):</label>
+              <input type="url" id="perfil_web" name="perfil_web" placeholder="https://open.spotify.com/artist/..." pattern="https?://.+" title="Debe ser una URL válida que comience por http:// o https://">
+            </p>
+
+            <p>
+              <label for="codigo_pase">Código de acreditación o reserva (formato URB-AAAA-XX):</label>
+              <input type="text" id="codigo_pase" name="codigo_pase" placeholder="Ej. URB-2026-ES" pattern="^URB-[0-9]{4}-[A-Z]{2}$" title="El código debe tener el formato URB- seguido de 4 dígitos del año y 2 letras mayúsculas de país (ej. URB-2026-ES)" required>
             </p>
 
             <p>
@@ -60,9 +77,34 @@
             </p>
           </fieldset>
 
-          <!-- Segundo grupo: Preferencias de contenido y mensaje -->
+          <!-- Segundo grupo: Preferencias de evento y selección interactiva -->
           <fieldset>
-            <legend>Tu Consulta y Preferencias Urbanas</legend>
+            <legend>Preferencias del Festival y Eventos Urbanos</legend>
+
+            <p>
+              <label for="fecha_evento">Fecha preferente para acudir al evento:</label>
+              <input type="date" id="fecha_evento" name="fecha_evento" min="2026-06-01" max="2026-12-31" value="2026-07-15" required>
+            </p>
+
+            <p>
+              <label for="hora_acceso">Franja horaria preferente de entrada:</label>
+              <input type="time" id="hora_acceso" name="hora_acceso" min="16:00" max="23:30" value="18:30" required>
+            </p>
+
+            <p>
+              <label for="numero_entradas">Número de pases solicitados (entre 1 y 10):</label>
+              <input type="number" id="numero_entradas" name="numero_entradas" min="1" max="10" step="1" value="2" required>
+            </p>
+
+            <p>
+              <label for="afinidad_trap">Nivel de afinidad con el Trap/Drill (1 al 10):</label>
+              <input type="range" id="afinidad_trap" name="afinidad_trap" min="1" max="10" step="1" value="8">
+            </p>
+
+            <p>
+              <label for="color_pulsera">Color distintivo para la pulsera de acreditación:</label>
+              <input type="color" id="color_pulsera" name="color_pulsera" value="#f43f5e">
+            </p>
 
             <p>
               <label for="genero_favorito">Subgénero urbano de mayor interés:</label>
@@ -126,11 +168,21 @@
 
     <!-- Sección 2: Información de soporte y respuesta -->
     <section id="canales-soporte">
-      <h2>Canales de Atención y Soporte</h2>
+      <h2>Canales de Atención y Estado de Aforo</h2>
       <article id="horarios-atencion">
         <h3>Tiempos y Vías de Respuesta</h3>
         <p>Nuestro equipo de redacción y prensa revisa los mensajes recibidos de lunes a viernes en horario de 09:00 a 19:00 CET. Las solicitudes de acreditación para festivales se responden con prioridad en un plazo inferior a 24 horas.</p>
         <p>Para consultas académicas o citas de investigación sobre música urbana, puedes consultar directamente la sección de <a href="historia.html">Historia</a>.</p>
+      </article>
+
+      <article id="aforo-festival-info">
+        <h3>Disponibilidad de Aforo — Urban Fest Madrid 2026</h3>
+        <p>Aforo cubierto para la edición de verano (8.400 de 10.000 localidades reservadas):</p>
+        <p>
+          <label for="aforo-festival">Nivel de aforo actual:</label>
+          <meter id="aforo-festival" min="0" max="10000" low="3000" high="7500" optimum="9000" value="8400">84% de aforo completo</meter>
+        </p>
+        <p><em>Queda menos del 20% de plazas antes de colgar el cartel de sold-out definitivo.</em></p>
       </article>
     </section>
 

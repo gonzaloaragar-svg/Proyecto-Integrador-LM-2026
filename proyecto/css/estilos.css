@@ -331,9 +331,35 @@ details p {
   color: var(--text-secondary);
 }
 
+/* Elementos interactivos de estado: progress y meter */
 progress, meter {
   width: 100%;
-  height: 1.25rem;
+  height: 1.4rem;
+  border-radius: var(--border-radius);
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+progress::-webkit-progress-bar {
+  background-color: var(--bg-color);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+}
+
+progress::-webkit-progress-value {
+  background: linear-gradient(90deg, var(--accent-color), #f97316);
+  border-radius: var(--border-radius);
+}
+
+meter::-webkit-meter-bar {
+  background-color: var(--bg-color);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+}
+
+meter::-webkit-meter-optimum-value {
+  background: linear-gradient(90deg, #10b981, #f43f5e);
   border-radius: var(--border-radius);
 }
 
@@ -346,6 +372,13 @@ fieldset {
   background-color: var(--surface-alt);
 }
 
+fieldset fieldset {
+  background-color: var(--surface-color);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
 legend {
   font-weight: 700;
   color: var(--accent-color);
@@ -355,13 +388,13 @@ legend {
 label {
   display: block;
   font-weight: 500;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.35rem;
   color: var(--text-primary);
 }
 
 input, select, textarea {
   width: 100%;
-  padding: 0.6rem 0.8rem;
+  padding: 0.65rem 0.85rem;
   background-color: var(--bg-color);
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
@@ -371,16 +404,29 @@ input, select, textarea {
   transition: var(--transition);
 }
 
+input[type="color"] {
+  height: 3rem;
+  padding: 0.25rem;
+  cursor: pointer;
+}
+
+input[type="range"] {
+  padding: 0.2rem 0;
+  cursor: pointer;
+  accent-color: var(--accent-color);
+}
+
 input[type="radio"], input[type="checkbox"] {
   width: auto;
   margin-right: 0.5rem;
   cursor: pointer;
+  accent-color: var(--accent-color);
 }
 
 input:focus, select:focus, textarea:focus {
   outline: none;
   border-color: var(--accent-color);
-  box-shadow: 0 0 5px var(--accent-glow);
+  box-shadow: 0 0 6px var(--accent-glow);
 }
 
 input[type="submit"], input[type="reset"] {
