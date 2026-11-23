@@ -117,3 +117,4 @@ En esta entrega (UD6-UD7) se ha refactorizado la arquitectura del sitio web de m
 - [x] Código HTML y CSS validado conforme al estándar W3C.
 - [x] Más de 8 commits convencionales y más de 5 `git push` realizados.
 - [x] `index.html` y `css/estilos.css` modificados en al menos 3 commits distintos cada uno.
+- [x] Commit final de entrega realizado (sin palabra del día requerida en esta sesión).
