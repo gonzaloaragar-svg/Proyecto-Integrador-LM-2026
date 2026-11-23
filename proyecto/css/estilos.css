@@ -1,0 +1,413 @@
+/* ==========================================================================
+   Proyecto Integrador LM 2026 — UD6-UD7: HTML5 Semántico y CSS
+   Autor: gonzaloaragar-svg
+   Hoja de estilos principal: estilos.css
+   ========================================================================== */
+
+/* Variables CSS para una paleta coherente de música urbana */
+:root {
+  --bg-color: #0f1117;
+  --surface-color: #1a1d27;
+  --surface-alt: #222636;
+  --border-color: #2d3348;
+  --text-primary: #f3f4f6;
+  --text-secondary: #9ca3af;
+  --accent-color: #f43f5e;
+  --accent-hover: #fb7185;
+  --accent-glow: rgba(244, 63, 94, 0.2);
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "Fira Code", Consolas, Monaco, "Courier New", monospace;
+  --border-radius: 8px;
+  --transition: all 0.2s ease-in-out;
+}
+
+/* Reseteo básico y modelo de caja */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ==========================================================================
+   Cabecera (<header>) y Navegación (<nav>)
+   ========================================================================== */
+header {
+  background-color: var(--surface-color);
+  border-bottom: 2px solid var(--accent-color);
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+}
+
+header p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  list-style: none;
+}
+
+nav a {
+  display: inline-block;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  background-color: var(--surface-alt);
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: var(--accent-color);
+  color: #ffffff;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 10px var(--accent-glow);
+}
+
+nav a.activo {
+  background-color: var(--accent-color);
+  color: #ffffff;
+  border-color: var(--accent-color);
+}
+
+/* ==========================================================================
+   Contenedor Principal (<main>), Secciones (<section>) y Artículos (<article>)
+   ========================================================================== */
+main {
+  flex: 1;
+  max-width: 1100px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+section {
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 1.75rem;
+}
+
+section > h2 {
+  font-size: 1.6rem;
+  color: var(--accent-color);
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+section > p {
+  color: var(--text-secondary);
+  margin-bottom: 1.25rem;
+}
+
+article {
+  background-color: var(--surface-alt);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+article:last-child {
+  margin-bottom: 0;
+}
+
+article h3 {
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+article p {
+  margin-bottom: 0.75rem;
+  color: var(--text-secondary);
+}
+
+article p strong {
+  color: var(--text-primary);
+}
+
+article ul {
+  list-style-position: inside;
+  margin-left: 0.5rem;
+}
+
+article ul li {
+  margin-bottom: 0.6rem;
+  color: var(--text-secondary);
+}
+
+article ul li strong {
+  color: var(--text-primary);
+}
+
+article img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+  border: 1px solid var(--border-color);
+}
+
+/* Bloque preformateado (Ficha técnica) */
+pre {
+  background-color: var(--bg-color);
+  color: #38bdf8;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  overflow-x: auto;
+  border: 1px solid var(--border-color);
+  margin-top: 0.5rem;
+}
+
+/* ==========================================================================
+   Barra lateral o contenido complementario (<aside>)
+   ========================================================================== */
+aside {
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--accent-color);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+}
+
+aside h2 {
+  font-size: 1.4rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+aside blockquote {
+  background-color: var(--surface-alt);
+  border-left: 3px solid var(--accent-color);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+aside blockquote p {
+  font-style: italic;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+aside blockquote cite {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  display: block;
+  font-style: normal;
+}
+
+aside ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+aside a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+aside a:hover,
+aside a:focus {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   Pie de Página (<footer>)
+   ========================================================================== */
+footer {
+  background-color: var(--surface-color);
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: auto;
+}
+
+#firma-gonzaloaragar-svg {
+  font-weight: 700;
+  color: var(--accent-color);
+  letter-spacing: 0.5px;
+  margin-bottom: 0.25rem;
+}
+
+footer p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   Elementos Interactivos y Multimedia (preparados para Retos 2 y 3)
+   ========================================================================== */
+figure {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+figure img, figure video {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+}
+
+figcaption {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+details {
+  background-color: var(--surface-alt);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+}
+
+details[open] {
+  border-color: var(--accent-color);
+}
+
+summary {
+  font-weight: 600;
+  color: var(--text-primary);
+  cursor: pointer;
+  outline: none;
+  list-style-position: outside;
+}
+
+summary:hover {
+  color: var(--accent-color);
+}
+
+details p {
+  margin-top: 0.75rem;
+  color: var(--text-secondary);
+}
+
+progress, meter {
+  width: 100%;
+  height: 1.25rem;
+  border-radius: var(--border-radius);
+}
+
+/* Formulario */
+fieldset {
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  background-color: var(--surface-alt);
+}
+
+legend {
+  font-weight: 700;
+  color: var(--accent-color);
+  padding: 0 0.5rem;
+}
+
+label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  color: var(--text-primary);
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+input[type="radio"], input[type="checkbox"] {
+  width: auto;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 5px var(--accent-glow);
+}
+
+input[type="submit"], input[type="reset"] {
+  width: auto;
+  padding: 0.6rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+input[type="submit"] {
+  background-color: var(--accent-color);
+  color: #ffffff;
+  border: none;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--accent-hover);
+}
+
+input[type="reset"] {
+  background-color: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+}
+
+input[type="reset"]:hover {
+  background-color: var(--surface-alt);
+  color: var(--text-primary);
+}
