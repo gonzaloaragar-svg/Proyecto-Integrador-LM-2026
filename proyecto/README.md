@@ -66,3 +66,54 @@ En esta unidad he ampliado el sitio web integrando una tabla de datos completa e
 | artistas.html | Artistas \| Música Urbana | Directorio de artistas urbanos con reseñas biográficas de figuras consagradas y emergentes, tabla comparativa de discografía y métricas (con colgroup, rowspan y colspan), galardones y una cita de autoría propia sobre el trabajo en estudio. |
 | historia.html | Historia \| Música Urbana | Recorrido cronológico de la música urbana desde sus orígenes en los años 70 y 90 hasta su consolidación global en la actualidad, hitos culturales y etapas clave. |
 | contacto.html | Contacto \| Música Urbana | Página interactiva con formulario adaptado al movimiento urbano: acreditación y datos de contacto, subgénero preferido, perfil de visitante, intereses y área de consulta/reserva. |
+
+
+## Tarea 6-7 · HTML5 Semántico, CSS y Multimedia
+
+### Objetivos y Justificación
+En esta entrega (UD6-UD7) se ha refactorizado la arquitectura del sitio web de música urbana sustituyendo las antiguas maquetaciones basadas en `<div>` por la estructura semántica nativa de HTML5, complementada con una hoja de estilos externa (`css/estilos.css`), formularios interactivos avanzados y recursos multimedia locales y externos.
+
+### Estructura de Directorios del Proyecto
+- `index.html`: Portada principal con estructura semántica completa (`header`, `nav`, `main`, `section`, `article`, `aside`, `footer`), reproductor de vídeo y audio local, figuras con `figcaption` y sección FAQ interactiva.
+- `contacto.html`: Formulario con controles avanzados de HTML5, medidores de aforo (`meter`), progreso (`progress`), validaciones por expresión regular y accesibilidad WAI-ARIA.
+- `artistas.html`, `generos.html`, `historia.html`: Páginas sincronizadas con enlaces a la hoja de estilos común y autoría reglamentaria.
+- `css/estilos.css`: Hoja de estilos principal con diseño en modo oscuro urbano, variables CSS, reglas responsivas para móviles (`@media`) y estilizado de etiquetas semánticas.
+- `media/`: Recursos multimedia locales (peso inferior a 10 MB):
+  - `video-urbano.mp4` y `video-urbano.webm`: Vídeo demostrativo en doble formato con atributo `poster`.
+  - `beat-urbano.mp3` y `beat-urbano.ogg`: Pista de percusión urbana en doble formato con `controls`.
+  - `poster-video.jpg`: Imagen de portada para el reproductor de vídeo.
+- `capturas/`: Directorio reservado para evidencias de visualización y validaciones del W3C.
+
+### Retos Implementados
+1. **Reto 1 · Estructura Semántica HTML5:**
+   - Declaración `<!DOCTYPE html>`, `<html lang="es">`, `<meta charset="UTF-8">` y `<meta name="author" content="gonzaloaragar-svg">` en todas las páginas.
+   - Jerarquía semántica sin `<div>` de maquetación: `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>` y `<footer>`.
+   - Firma obligatoria en el pie de todas las páginas: `<p id="firma-gonzaloaragar-svg">© 2026 gonzaloaragar-svg</p>`.
+2. **Reto 2 · Formulario HTML5 y Medidores:**
+   - 8 tipos de `<input>` HTML5: `email`, `tel`, `url`, `date`, `time`, `number`, `range`, `color`.
+   - Atributos de validación: `required`, `placeholder`, `min`, `max`, `step`.
+   - Validación personalizada mediante `pattern="^URB-[0-9]{4}-[A-Z]{2}$"` con su correspondiente `title` explicativo y soporte `aria-describedby`.
+   - Elemento `<meter>` para el aforo del festival y `<progress>` para el avance de la solicitud.
+3. **Reto 3 · Multimedia e Interactivos:**
+   - Vídeo local (`video-urbano.mp4` / `.webm`) con `controls`, `poster` y mensaje alternativo accesible.
+   - Pista de audio local (`beat-urbano.mp3` / `.ogg`) con `controls`.
+   - Integración de vídeo externo en `<iframe>` desde YouTube.
+   - Imágenes estructuradas mediante `<figure>` y `<figcaption>`.
+   - Sección de preguntas frecuentes con 3 bloques `<details>`/`<summary>`, uno de ellos abierto por defecto (`open`) y otro mostrando etiquetas HTML mediante entidades `&lt;` y `&gt;`.
+
+### Tabla de Validación W3C (UD6-UD7)
+
+| Fichero | Errores W3C | Corrección / Estado |
+| :--- | :--- | :--- |
+| `index.html` | 0 errores | Estructura semántica HTML5 conforme al estándar W3C, sin etiquetas obsoletas ni advertencias. |
+| `contacto.html` | 0 errores | Todos los controles vinculados mediante `label for` e `id`, sin `div` estructurales. |
+| `css/estilos.css` | 0 errores | Hoja CSS validada conforme al estándar W3C CSS nivel 3. |
+
+### Checklist de Verificación Final
+- [x] Commit inicial exacto: `chore: inicio tarea 6-7`.
+- [x] Repositorio público en `https://github.com/gonzaloaragar-svg/Proyecto-Integrador-LM-2026.git`.
+- [x] Carpetas `css/`, `media/` y `capturas/` presentes en el repositorio.
+- [x] `<meta name="author" content="gonzaloaragar-svg">` y `<p id="firma-gonzaloaragar-svg">© 2026 gonzaloaragar-svg</p>` en todas las páginas HTML.
+- [x] Código HTML y CSS validado conforme al estándar W3C.
+- [x] Más de 8 commits convencionales y más de 5 `git push` realizados.
+- [x] `index.html` y `css/estilos.css` modificados en al menos 3 commits distintos cada uno.
