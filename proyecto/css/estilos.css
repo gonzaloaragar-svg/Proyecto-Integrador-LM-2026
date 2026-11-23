@@ -293,6 +293,37 @@ figure img, figure video {
   height: auto;
   border-radius: var(--border-radius);
   border: 1px solid var(--border-color);
+  display: block;
+  margin: 0 auto;
+}
+
+video {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  background-color: #000000;
+  display: block;
+  margin: 0.5rem auto;
+}
+
+audio {
+  width: 100%;
+  max-width: 560px;
+  display: block;
+  margin: 1rem 0;
+  accent-color: var(--accent-color);
+}
+
+iframe {
+  width: 100%;
+  max-width: 560px;
+  height: 315px;
+  border: none;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  display: block;
+  margin: 1rem auto;
 }
 
 figcaption {
